@@ -8,5 +8,7 @@
 <a href='https://follow-your-click.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=mayuelala.FollowYourClick&left_color=green&right_color=red)  [![GitHub](https://img.shields.io/github/stars/mayuelala/FollowYourClick?style=social)](https://github.com/mayuelala/FollowYourClick) 
 </div>
 
-
-THe code is comming soon!
+# Note 😊
+### We are cleaning the code and creating a demo. We really want everybody to try it!
+### The code and checkpoints will be released in April!
+### Thanks for your attention! If you think this work is great, please give us stars ⭐️⭐️⭐
