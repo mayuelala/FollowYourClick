@@ -11,7 +11,7 @@
 
 # 🖼 Gallery
 
-We have showcased some results of image animation using AnimateZero on generated images below.
+We have showcased some results of image animation using Follow-Your-Click on generated images below.
 
 More results can be found on our [Project page](https://follow-your-click.github.io/).
 
