@@ -59,7 +59,7 @@ More results can be found on our [Project page](https://follow-your-click.github
 
 # 📍 Note  
 ### 🕹 We are cleaning the code and creating a demo. We really want everybody to try it! 
-### 😊 The code and checkpoints will be released in April！
+### 😊 The code and checkpoints is coming soon！
 ### 💗 Thanks for your attention! If you are interested in our work, please give us a star ⭐️⭐️⭐ to let us know.
 ### 🚀 We will speed up the development! 
 
