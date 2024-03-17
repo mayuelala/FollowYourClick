@@ -63,4 +63,13 @@ More results can be found on our [Project page](https://follow-your-click.github
 ### 💗 Thanks for your attention! If you are interested in our work, please give us a star ⭐️⭐️⭐ to let us know.
 ### 🚀 We will speed up the development! 
 
-
+# 🎼🎼🎼 Citation 
+If you think this project is helpful, please feel free to leave a star⭐️⭐️⭐️ and cite our paper:
+```bibtex
+@article{ma2024follow,
+  title={Follow-Your-Click: Open-domain Regional Image Animation via Short Prompts},
+  author={Ma, Yue and He, Yingqing and Wang, Hongfa and Wang, Andong and Qi, Chenyang and Cai, Chengfei and Li, Xiu and Li, Zhifeng and Shum, Heung-Yeung and Liu, Wei and others},
+  journal={arXiv preprint arXiv:2403.08268},
+  year={2024}
+}
+``` 
