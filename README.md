@@ -63,7 +63,7 @@ More results can be found on our [Project page](https://follow-your-click.github
 ### 💗 Thanks for your attention! If you are interested in our work, please give us a star ⭐️⭐️⭐ to let us know.
 ### 🚀 We will speed up the development! 
 
-# 🎼🎼🎼 Citation 
+# 🎼 Citation 
 If you think this project is helpful, please feel free to leave a star⭐️⭐️⭐️ and cite our paper:
 ```bibtex
 @article{ma2024follow,
