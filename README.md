@@ -82,6 +82,6 @@ If you think this project is helpful, please feel free to leave a star⭐️⭐�
 }
 ``` 
 
-## Star History
+## ⭐️ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mayuelala/FollowYourClick&type=Date)](https://star-history.com/#mayuelala/FollowYourClick&Date)
