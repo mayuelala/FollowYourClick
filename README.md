@@ -71,6 +71,12 @@ More results can be found on our [Project page](https://follow-your-click.github
 [Follow-Your-Click](https://github.com/mayuelala/FollowYourClick): Open-domain Regional image animation via Short Prompts.
   
 
+## ⭐️ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mayuelala/FollowYourClick&type=Date)](https://star-history.com/#mayuelala/FollowYourClick&Date)
+
+
+
 # 🎼 Citation 
 If you think this project is helpful, please feel free to leave a star⭐️⭐️⭐️ and cite our paper:
 ```bibtex
@@ -82,6 +88,3 @@ If you think this project is helpful, please feel free to leave a star⭐️⭐�
 }
 ``` 
 
-## ⭐️ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mayuelala/FollowYourClick&type=Date)](https://star-history.com/#mayuelala/FollowYourClick&Date)
