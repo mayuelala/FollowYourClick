@@ -1,0 +1,91 @@
+image_finetune: false
+
+output_dir: "outputs"
+pretrained_model_path: "YOUR PATH/share_301124792/jacobkong/gitpackages/huggingface_models/stable-diffusion-v1-5"
+motion_pretrained_model_path: "YOUR PATH/share_301124792/jacobkong/gitpackages/tmp/training_14M_448x256_w_multi_scale_w_fps_v2_32f_from_170k-2023-11-10T14-29-17/checkpoint-42000.ckpt"
+unet_checkpoint_path: "YOUR PATH/share_301124792/jacobkong/gitpackages/tmp/image_finetune_14M_768x512-2023-11-13T00-04-23/checkpoint-8000.ckpt"
+
+dataset_name: 'shutterstock'
+
+unet_additional_kwargs:
+  use_motion_module              : true
+  motion_module_resolutions      : [ 1,2,4,8 ]
+  unet_use_cross_frame_attention : false
+  unet_use_temporal_attention    : false
+  use_inflated_groupnorm         : true
+  motion_module_mid_block        : true
+  use_fps_condition              : true
+
+  motion_module_type: Vanilla
+  motion_module_kwargs:
+    num_attention_heads                : 8
+    num_transformer_block              : 1
+    attention_block_types              : [ "Temporal_Self", "Temporal_Self" ]
+    temporal_position_encoding         : true
+    temporal_position_encoding_max_len : 32
+    temporal_attention_dim_div         : 1
+    zero_initialize                    : true
+    
+
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:          0.00085
+  beta_end:            0.012
+  beta_schedule:       "linear"
+  steps_offset:        1
+  clip_sample:         false
+
+train_data:
+  csv_path: 
+    - "YOUR PATH/share_301124792/0_public_datasets/shutterstock_6M/shutterstock_450w_new_nocr.csv"
+    - "YOUR PATH/share_301124792/0_public_datasets/webvid-10m/annotations/results_10M_train.csv"
+    # - "YOUR PATH/share_301124792/0_public_datasets/HD-VG-130M/all_info_filtered.csv"
+    - "YOUR PATH/share_301124792/0_public_datasets/pexels_video/pexel_data_info.csv"
+  video_folder: 
+    - "YOUR PATH/share_1629729/0_public_datasets/shutterstock/videos"
+    - "YOUR PATH/share_1367250/0_public_datasets/webvid-10m/videos"
+    # - "YOUR PATH/share_1629729/0_public_datasets/HD-VG-130M/video_clips"
+    - "YOUR PATH/share_1367250/0_public_datasets/pexels_video/videos_compress"
+
+  sample_size:     
+    - 512
+    - 896
+  sample_stride:   4
+  sample_n_frames: 16
+  dynamic_fps    : True
+
+validation_data:
+  prompts:
+    - "Snow rocky mountains peaks canyon. Snow blanketed rocky mountains surround and shadow deep canyons."
+    - "A drone view of celebration with Christma tree and fireworks, starry sky - background."
+    - "Robot dancing in times square."
+    - "Pacific coast, carmel by the sea ocean and waves."
+  num_inference_steps: 40
+  guidance_scale: 8.
+
+trainable_modules:
+  - "fps"
+  - "motion_modules."
+
+
+learning_rate:    1.e-5
+train_batch_size: 3
+
+max_train_epoch:      -1
+max_train_steps:      2000000
+checkpointing_epochs: -1
+checkpointing_steps:  1000
+
+validation_steps:       50
+validation_steps_tuple: [2, 50]
+
+global_seed: 42
+mixed_precision_training: true
+enable_xformers_memory_efficient_attention: True
+gradient_checkpointing: True
+
+use_temporal_multi_scale_training: True
+use_fps_condition: true
+sample_size: 2
+
+is_debug: False

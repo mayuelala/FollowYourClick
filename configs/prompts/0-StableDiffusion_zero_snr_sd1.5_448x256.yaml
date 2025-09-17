@@ -1,0 +1,35 @@
+RealisticVision:
+  base: ""
+  path: "" 
+  motion_module:
+    - "/teg_amai_cq5_1/share_1629729/mayuema/Experiment/AnimateDiff_it2v/training_14M_448x256_part_img_embed_mask_condition_zero_snr_sd1.5_img_as_vid_for_train_all_parameters-2024-01-24T21-21-18/checkpoints/checkpoint-24000.ckpt"
+  # seed:           [5658137986800322009, 12099779162349365895, 10499524853910852697, 16768009035333711932]
+  seed:           [1]
+  steps:          100
+  guidance_scale: 8.
+
+  prompt:
+    - A lots of Scientists in a dark laboratory, sit by the desk.
+    - asain scientists in an underground laboratory. Close up, zoom in.
+    - The crowd is watching the alien monster on the screen in the meeting room.
+    - A giant planet in the dark space, floating.
+    - cosmic background with floating planets, galaxy.
+    - A asain scientists look at the sky full of start in the night, desert, close-up.
+    - the alien world, Futurism.
+    - Chaotic scenes in modern cities, .
+    - A massive radio telescope standing atop a mountain on earth.
+    - astronomers are watching the night sky in the.
+    - A man in spacesuit is walking in the Futurism desert, zoom in.
+    - Scientists conducting a dimensional leap experiment.
+    - A Scientist in space suit walking forward, Realistic portrait.
+    - A asain man in space suit is jumping in the space.
+    - Alien Futurism city.
+    - asain Scientists talking with the alien, on the screen screen, close up.
+    - a asain woman scientist, in front of big window, walking around, tense expression on the scientist's face, hair in the wind, zoom in, sci-fi setting, 
+    - A asain girl wearing helmet-like brain-reading device.
+    - A asain girl and an alien wear connected helmets and are exchanging thoughts.
+    - A fighter jet flying through the clouds, sunset, fire
+
+  n_prompt:
+    - "ow resolution, low quality, lowres, worst quality,  noisy, duplicate, repeat, double, ugly, obese, deformed, render, rendered, bad anatomy,  text,  watermark, bad anatomy, bad hands, text, missing finger,extra fingers"
+

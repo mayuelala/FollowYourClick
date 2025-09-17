@@ -1,0 +1,59 @@
+image_finetune: true
+
+output_dir: "outputs"
+pretrained_model_path: "models/StableDiffusion/stable-diffusion-v1-5"
+dataset_name: 'shutterstock'
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:          0.00085
+  beta_end:            0.012
+  beta_schedule:       "scaled_linear"
+  steps_offset:        1
+  clip_sample:         false
+
+train_data:
+  csv_path: 
+    # - "YOUR PATH/share_1367250/0_public_datasets/shutterstock_6M/shutterstock_450w_new_nocr.csv"
+    # - "YOUR PATH/share_1367250/0_public_datasets/webvid-10m/annotations/results_10M_train.csv"
+    - "YOUR PATH/share_1629729/0_public_datasets/HD-VG-130M/all_info_filtered.csv"
+    - "YOUR PATH/share_1367250/0_public_datasets/pexels_video/pexel_data_info.csv"
+  video_folder: 
+    # - "YOUR PATH/share_1629729/0_public_datasets/shutterstock/videos"
+    # - "YOUR PATH/share_1367250/0_public_datasets/webvid-10m/videos"
+    - "YOUR PATH/share_1629729/0_public_datasets/HD-VG-130M/video_clips"
+    - "YOUR PATH/share_1367250/0_public_datasets/pexels_video/videos_compress"
+  sample_size:  
+    - 256
+    - 448
+
+validation_data:
+  prompts:
+    - "Snow rocky mountains peaks canyon. Snow blanketed rocky mountains surround and shadow deep canyons."
+    - "A drone view of celebration with Christma tree and fireworks, starry sky - background."
+    - "Robot dancing in times square."
+    - "Pacific coast, carmel by the sea ocean and waves."
+  num_inference_steps: 25
+  guidance_scale: 8.
+
+trainable_modules:
+  - "."
+
+unet_checkpoint_path: "outputs/image_finetune_14M_448x256-2023-09-04T13-12-26/checkpoints/checkpoint-32000.ckpt"
+
+learning_rate:    1.e-5
+train_batch_size: 48
+
+max_train_epoch:      -1
+max_train_steps:      2000000
+checkpointing_epochs: -1
+checkpointing_steps:  2000
+
+validation_steps:       100
+validation_steps_tuple: [2, 50]
+
+global_seed: 42
+mixed_precision_training: true
+enable_xformers_memory_efficient_attention: True
+gradient_checkpointing: True
+
+is_debug: False
